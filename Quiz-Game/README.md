@@ -52,4 +52,4 @@ Add, remove or update entries in that array to change the quiz content.
 - Persist high scores to `localStorage`.
 - Load questions from a JSON file or API.
 
-If you'd like, I can commit this README and the recent changes to Git, or add any of the improvements above. Which would you like next?
+

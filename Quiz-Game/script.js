@@ -109,7 +109,8 @@ function selectAnswer(e) {
         btn.classList.add('correct');
         score++;
         scoreEl.textContent = score;
-    } else {
+    } 
+    else {
         btn.classList.add('incorrect');
         // highlight the correct answer
         const buttons = answersContainer.querySelectorAll('button');

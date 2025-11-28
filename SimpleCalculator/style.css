@@ -1,0 +1,69 @@
+:root{
+  --bg: linear-gradient(135deg,#e9f0ff 0%, #f7f7fb 100%);
+  --card: rgba(255,255,255,0.8);
+  --accent: #6c5ce7;
+  --accent-2: #00b894;
+  --text: #0f1720;
+  --muted: #6b7280;
+  --shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+*{box-sizing:border-box}
+body{
+  min-height:100vh;
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  color:var(--text);
+}
+
+.calc-app{width:100%;max-width:420px}
+.calculator{
+  background:var(--card);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  backdrop-filter: blur(6px) saturate(120%);
+  border:1px solid rgba(255,255,255,0.6);
+}
+.calc-header{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.calc-header h1{font-size:1.2rem;margin:0}
+.muted{color:var(--muted);font-size:0.85rem;margin:0}
+
+.display{
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.5));
+  border-radius:12px;
+  padding:18px 16px;
+  font-size:2rem;
+  text-align:right;
+  min-height:64px;
+  margin-bottom:14px;
+  display:flex;align-items:center;justify-content:flex-end;
+  box-shadow: inset 0 -6px 18px rgba(12,18,30,0.03);
+  color:var(--text);
+}
+
+.pad{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.btn{
+  background:linear-gradient(180deg,#fff,#f3f6ff);
+  border-radius:12px;
+  border:none;padding:14px;font-size:1.05rem;
+  box-shadow: 0 6px 14px rgba(16,24,40,0.06);
+  cursor:pointer;color:var(--text);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:active{transform:translateY(2px);box-shadow: 0 3px 8px rgba(16,24,40,0.06)}
+.btn.operator{background:linear-gradient(180deg,#6c5ce7,#5a4ad6);color:white;box-shadow:0 8px 20px rgba(108,92,231,0.18)}
+.btn.equals{background:linear-gradient(180deg,var(--accent-2),#00a97a);color:white;box-shadow:0 8px 20px rgba(0,185,148,0.14)}
+.btn.wide{grid-column:span 2}
+
+.calc-footer{margin-top:14px;text-align:center;color:var(--muted);font-size:0.85rem}
+
+@media (max-width:420px){
+  .display{font-size:1.6rem;padding:12px}
+  .btn{padding:12px;font-size:1rem}
+}
