@@ -109,7 +109,7 @@ function selectAnswer(e) {
         btn.classList.add('correct');
         score++;
         scoreEl.textContent = score;
-    } 
+    }
     else {
         btn.classList.add('incorrect');
         // highlight the correct answer
@@ -165,20 +165,20 @@ if (!startScreen || !quizScreen || !resultScreen) {
 const themeToggle = document.getElementById('theme-toggle');
 const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-function applyTheme(theme){
-    if(theme === 'dark') document.body.classList.add('dark');
+function applyTheme(theme) {
+    if (theme === 'dark') document.body.classList.add('dark');
     else document.body.classList.remove('dark');
-    if(themeToggle) themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    if (themeToggle) themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 }
 
-function initTheme(){
+function initTheme() {
     const stored = localStorage.getItem('theme');
-    if(stored) applyTheme(stored);
+    if (stored) applyTheme(stored);
     else applyTheme(prefersDark ? 'dark' : 'light');
 }
 
-if(themeToggle){
-    themeToggle.addEventListener('click', ()=>{
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
         const isDark = document.body.classList.toggle('dark');
         const theme = isDark ? 'dark' : 'light';
         applyTheme(theme);
