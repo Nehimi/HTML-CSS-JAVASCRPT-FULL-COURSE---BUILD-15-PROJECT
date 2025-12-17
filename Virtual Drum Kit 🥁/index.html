@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="keys">
+    <div data-key="65" class="key"><kbd>A</kbd><span>CLAP</span></div>
+    <div data-key="83" class="key"><kbd>S</kbd><span>HIHAT</span></div>
+    <div data-key="68" class="key"><kbd>D</kbd><span>KICK</span></div>
+    <div data-key="70" class="key"><kbd>F</kbd><span>SNARE</span></div>
+    <div data-key="71" class="key"><kbd>G</kbd><span>BOOM</span></div>
+    <div data-key="72" class="key"><kbd>H</kbd><span>RIDE</span></div>
+  </div>
+
+  <audio data-key="65" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/114787/clap.wav"></audio>
+  <audio data-key="83" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/114787/hihat.wav"></audio>
+  <audio data-key="68" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/114787/kick.wav"></audio>
+  <audio data-key="70" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/114787/snare.wav"></audio>
+  <audio data-key="71" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/114787/boom.wav"></audio>
+  <audio data-key="72" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/114787/ride.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
